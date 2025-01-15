@@ -1,16 +1,11 @@
 <script lang="ts">
-	import { setToastState } from '$lib/toast-state.svelte';
 	import type { Snippet } from 'svelte';
 	import Navigation from '$lib/components/Navigation.svelte';
-	import Toaster from '$lib/components/Toaster.svelte';
 
 	let { children }: { children: Snippet } = $props();
-
-	setToastState();
 </script>
 
 <Navigation />
-<Toaster />
 <main>
 	{@render children()}
 </main>
